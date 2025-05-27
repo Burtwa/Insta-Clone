@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Flex, Box, Image } from '@chakra-ui/react'
+import AuthForm from '../../components/AuthForm/AuthForm'
+import { Container, Flex, Box, Image, VStack } from '@chakra-ui/react'
 
 const AuthPage = () => {
   return (
@@ -9,6 +10,12 @@ const AuthPage = () => {
         <Box display={{base: "none", md: "block"}}>
             <Image src="/auth.png" h={650} alt='Phone img' />
          </Box>
+
+         {/* Right handside */}
+         <VStack spacing={4} align={"stretch"}>
+            <AuthForm />
+
+         </VStack>
         </Container>
     </Flex>
   )
